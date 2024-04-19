@@ -4,6 +4,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked', // Added for type-aware linting
+    'plugin:@typescript-eslint/stylistic-type-checked', // Optionally added for stylistic type-checking
+    'plugin:react/recommended', // Added for React linting
+    'plugin:react/jsx-runtime', // Added for JSX runtime support
     'plugin:react-hooks/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -15,4 +19,4 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
-}
+};
