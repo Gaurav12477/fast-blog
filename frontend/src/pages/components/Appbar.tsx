@@ -7,6 +7,7 @@ import { FaPlus } from "react-icons/fa6";
 
 
 const   Appbar = () => {
+  const username = localStorage.getItem("username");
   return (
     <div className="border-b-2 flex flex-row p-3 sm:p-5 justify-between">
       <div className="flex justify-center items-center">
@@ -25,7 +26,7 @@ const   Appbar = () => {
           <IoMdNotificationsOutline />
         </div>
         <div>
-            <Avatar name="gaurav Sharma"/>
+            <Avatar name={username ? username : "Guest123"}/>
         </div>
       </div>
     </div>

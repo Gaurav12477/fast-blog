@@ -22,8 +22,9 @@ const Auth = ({type}: {type: "signup" | "signin"}) => {
                 postInputs
             );
     
-            const {jwt} = response.data;
+            const {jwt, name = "guest12"} = response.data;
             localStorage.setItem("token", jwt);
+            localStorage.setItem("username", name); 
             navigate('/');
         } catch (error) {
             // Provide user-friendly feedback
