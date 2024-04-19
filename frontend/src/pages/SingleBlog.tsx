@@ -1,7 +1,8 @@
-import { useSingleBlog } from "../hooks"  
+import { useSingleBlog } from "../hooks"
 import { useParams } from "react-router-dom";
 import FullBlog from "./components/FullBlog";
 import BlogSkeleton from "./components/BlogSkeleton";
+
 
 
 const SingleBlog = () => {
@@ -20,6 +21,11 @@ const SingleBlog = () => {
           </div>
         </div>
           );
+    }
+
+    if (!blog) {
+      // Handle the case where blog is undefined
+      return <div>Blog not found</div>;
     }
 
     return (

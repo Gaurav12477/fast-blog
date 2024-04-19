@@ -1,6 +1,5 @@
 import axios from "axios"
 import Appbar from "./components/Appbar"
-import { BACKEND_URL } from "../config"
 import { ChangeEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -51,7 +50,7 @@ function TextEditor ({onChange} : {onChange: (e:ChangeEvent<HTMLTextAreaElement>
             <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 ">
                 <div className="px-4 py-2 bg-white rounded-t-lg ">
                     
-                    <textarea onChange={onChange} className="w-full px-0 border-none focus:ring-0  focus:ring-transparent focus-outline-none text-sm text-gray-900 bg-white" rows="10" placeholder="Write a comment..." required ></textarea>
+                    <textarea onChange={onChange} className="w-full px-0 border-none focus:ring-0  focus:ring-transparent focus-outline-none text-sm text-gray-900 bg-white" rows={10} placeholder="Write a comment..." required ></textarea>
                 </div>
                 
             </div>
